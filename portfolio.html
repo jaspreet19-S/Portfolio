@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<title>
+    My Portfolio
+</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+.btn{
+font-family: 'Baloo Bhai',cursive;
+margin: 0px 9px;
+background-color: black;
+color: white;
+padding: 4px 14px;
+border: 2px solid grey;
+border-radius: 10px;
+font-size: 20px;
+cursor: pointer;
+}
+.btn:hover{
+background-color: grey(31,30,30);
+}
+.container{
+border: 2px solid white;
+/*margin: 106px 80px;*/
+padding: 30px;
+/*width: 33%;*/
+border-radius: 28px;
+}
+.form-group input {
+        font-family: 'Baloo Bhai', cursive;
+        text-align: center;
+        display: block;
+        width: 508px;
+        padding: 1px;
+        border: 2px solid black;
+        margin: 11px auto;
+        font-size: 25px;
+        border-radius: 8px;
+    }
+
+    .container h1 {
+        text-align: center;
+
+    }
+    .mySlides {display: none}
+
+</style>
+<body class="w3-black">
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <img src="data:image/png;base64,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" style="width:100%">
+  <hr>
+  <hr>
+  <a href="home.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+    <i class="fa fa-file w3-xxlarge"></i>
+    <p>PORTFOLIO</p>
+  </a>
+  
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>ABOUT ME</p>
+  </a>
+  <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-eye w3-xxlarge"></i>
+    <p>MY WORK</p>
+  </a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>CONTACT ME</p>
+  </a>
+</nav>
+   <!-- Navbar on small screens (Hidden on medium and large screens) -->
+   <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+    <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+      <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+      <a href="portfolio.html" class="w3-bar-item w3-button" style="width:25% !important">PORTFOLIO</a>
+      <a href="portfolio.html" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+      <a href="portfolio.html" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
+      <a href="portfolio.html" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+    </div>
+  </div>
+
+<!-- About Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+    <h2 class="w3-text-light-grey">About Me</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <p>I am currently pursuing in the field of Computer Science and Engineering. To express my strength , I am Hardworking,Creative and Dedicated at my work along with I have good
+    Communication and Presentation Skills.
+    </p>
+    <h3 class="w3-padding-16 w3-text-light-grey">My Skills</h3>
+    <p class="w3-wide">Adobe Photoshop</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:95%"></div>
+    </div>
+    <p class="w3-wide">Web Design</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:85%"></div>
+    </div>
+    <p class="w3-wide">Photography</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:80%"></div>
+    </div><br>
+    <button class="w3-button w3-light-grey w3-padding-large w3-section">
+      <i class="fa fa-download"></i> Download Resume
+    </button>
+    <!-- End About Section -->
+
+    <!-- Portfolio Section -->
+  <div class="w3-padding-64 w3-content" id="photos">
+    <h2 class="w3-text-light-grey">My Work</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <!-- Photo grid (modal) -->
+  <div class="w3-row-padding">
+    <div class="w3-half">
+      <img src="https://image.freepik.com/free-vector/simple-flyer-with-circles-wave_1017-2343.jpg" style="width:100%" onclick="onClick(this)" alt="Flyers">
+      <img src="https://images.vexels.com/media/users/3/77889/preview2/ef0ef891baa66fb263cc9a0bf3bc1090-flyer-template.jpg" style="width:100%" onclick="onClick(this)" alt="Flyers">
+      <img src="https://png.pngtree.com/template/20190627/ourlarge/pngtree-new-corporate-business-flyer-template-image_221422.jpg" style="width:100%" onclick="onClick(this)" alt="Flyers">
+    </div>
+
+    <div class="w3-half">
+      <img src="https://cdn5.f-cdn.com/contestentries/1446275/28684362/5bf188e769698_thumb900.jpg" style="width:100%" onclick="onClick(this)" alt="Testimonials">
+      <img src="https://i1.wp.com/graphicmega.com/wp-content/uploads/2019/08/Print-Bi-Fold-Brochure-Design-1.jpg?fit=2500%2C1667&ssl=1" style="width:100%" onclick="onClick(this)" alt="Brouchers">
+      <img src="https://designshack.net/wp-content/uploads/Free-Professional-Word-Brochure-Template.jpg" style="width:100%" onclick="onClick(this)" alt="Broucher">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ4mWNxDnP0Wu2wTOBfqRzAOBsSRcILMuhu-g&usqp=CAU" style="width:100%" onclick="onClick(this)" alt="Poster">
+    </div>
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+</div>
+   <!--end of portfolio section-->
+   <!-- Contact Section -->
+   <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+    <h2 class="w3-text-light-grey">Contact Me</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <div class="container">
+<center><h2>Let's get in touch.Send me a message:</h2></center>
+        <form>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Name">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Email Id">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Phone Number">
+            </div>
+            <center>
+            <button class="btn">Submit</button>
+            </center>
+        </form>
+    </div>
+    <!-- End Contact Section -->
+  </div>
+    <!-- Footer -->
+  <footer class="w3-content w3-padding-64 w3-text-grey">
+  <div class="w3-row-padding">
+      <div class="w3-third">
+        <h3>INFO</h3>
+        <p>I am currently pursuing bachlers in the field of Computer Science and Engineering.</p>      
+      </div>
+   
+      <div class="w3-third">
+        <h3>BLOG POSTS</h3>
+        <ul class="w3-ul">
+          <li class="w3-padding-16 w3-hover-black">
+            <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Reading</span><br>
+            <span>life relatable 
+                 books</span>
+          </li>
+          <li class="w3-padding-16 w3-hover-black">
+            <img src="https://images.unsplash.com/photo-1581548133918-a12f385790af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Designing</span><br>
+            <span>template,letter,testimonials,
+                website pages,flyers,certificates,
+                brochures,etc.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="w3-third">
+        <h3>POPULAR TAGS</h3>
+        <p>
+          <span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">London</span>
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">IKEA</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">NORWAY</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">DIY</span>
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Baby</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Family</span>
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">News</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Clothing</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Shopping</span>
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Sports</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Games</span>
+        </p>
+    </div>
+    </div>
+    <div class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <p class="w3-medium">Copyright ©:www.My Portfolio.com. All rights reserved!</p>
+  </div>
+
+  </footer>
+  <!-- End footer -->
+
+<!-- END PAGE CONTENT -->
+</div>
+<script>
+  function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>

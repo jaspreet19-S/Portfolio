@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<title>
+    My Portfolio
+</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+</style>
+<body class="w3-black">
+
+        <!-- Icon Bar (Sidebar - hidden on small screens) -->
+        <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+          <!-- Avatar image in top left corner -->
+          <img src="data:image/png;base64,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" style="width:100%">
+          <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+            <i class="fa fa-home w3-xxlarge"></i>
+            <p>HOME</p>
+          </a>
+          <a href="portfolio.html" class="w3-bar-item w3-button w3-padding-large w3-black">
+            <i class="fa fa-file w3-xxlarge"></i>
+            <p>PORTFOLIO</p>
+          </a>
+          
+          <a href="portfolio.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+            <i class="fa fa-user w3-xxlarge"></i>
+            <p>ABOUT</p>
+          </a>
+          <a href="portfolio.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+            <i class="fa fa-eye w3-xxlarge"></i>
+            <p>PHOTOS</p>
+          </a>
+          <a href="portfolio.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+            <i class="fa fa-envelope w3-xxlarge"></i>
+            <p>CONTACT</p>
+          </a>
+        </nav>
+        
+        <!-- Navbar on small screens (Hidden on medium and large screens) -->
+        <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+          <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+            <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+            <a href="portfolio.html" class="w3-bar-item w3-button" style="width:25% !important">PORTFOLIO</a>
+            <a href="portfolio.html" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+            <a href="portfolio.html" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
+            <a href="portfolio.html" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+          </div>
+        </div>
+         <!--slides-->
+         <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+         <div class="w3-display-middle">
+            <h1 class="w3-jumbo w3-animate-top">Jaspreet Kaur Saggu</h1>
+            <hr class="w3-border-grey" style="margin:auto;">
+            <p class="w3-padding-large w3-center">Graphic Designer and Web Designer</p>
+            </div>
+  <img class="mySlides w3-animate-fading" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=752&q=80" style="width:100%">
+  <img class="mySlides w3-animate-fading" src="https://cdn.wallpapersafari.com/39/9/oH3L4s.jpg" style="width:100%">
+  <img class="mySlides w3-animate-fading" src="https://wallpaperaccess.com/full/1533410.jpg" style="width:100%">
+  <img class="mySlides w3-animate-fading" src="https://images.unsplash.com/photo-1560858275-933aa173847b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=889&q=80" style="width:100%">
+  
+  </div>
+  <!--footer-->
+  <footer>
+  <div class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <p class="w3-medium">Copyright ©:www.My Portfolio.com. All rights reserved!</p>
+    </div>
+  
+    </footer>
+
+  <script>
+    var myIndex = 0;
+    carousel();
+    
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}    
+      x[myIndex-1].style.display = "block";  
+      setTimeout(carousel, 9000);    
+    }
+    </script>
+</body>
+</html>
